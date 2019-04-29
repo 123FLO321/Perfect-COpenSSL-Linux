@@ -9,6 +9,7 @@
 #include "openssl/hmac.h"
 #include "openssl/rand.h"
 #include "openssl/cms.h"
+#include "openssl/ossl_typ.h"
 
 #ifndef SSL_CTRL_SET_ECDH_AUTO
 int SSL_CTRL_SET_ECDH_AUTO;
