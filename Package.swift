@@ -3,11 +3,11 @@
 import PackageDescription
 
 let package = Package(
-	name: "COpenSSL",
-	products: [
-		.library(name: "COpenSSL", targets: ["COpenSSL"])
-	],
-	targets: [
-		.target(name: "COpenSSL", path: "COpenSSL", exclude: ["scripts"])
-	]
+    name: "COpenSSL",
+    products: [
+        .library(name: "COpenSSL", targets: ["COpenSSL"])
+    ],
+    targets: [
+        .systemLibrary(name: "COpenSSL", pkgConfig: "openssl", providers: [.apt(["openssl libssl-dev"])])
+    ]
 )
